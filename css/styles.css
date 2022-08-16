@@ -188,3 +188,58 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+    
+height: 100%;
+}
+}
+.btn{
+  color: #ffffff;
+  font-style: oblique ;
+  border-color: #FA8072
+  };
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+/* unvisited link */
+a:link {
+ 
+  text-decoration: none ;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(0, 0, 0);
+  text-decoration: none ;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(255, 0, 0);
+  text-decoration: none ;
+}
+
+/* selected link */
+a:active {
+  color: white;
+  text-decoration: none ;
+}
+.btn-redes{
+  color: #fff;
+    background-color: #fbfbfb;
+    border-color: #ffffff;
+}
