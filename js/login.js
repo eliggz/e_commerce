@@ -3,7 +3,7 @@ function manejarSubmit(event){
     const contrasena=document.getElementById("contraseña").value;
     const correo=document.getElementById("correo").value;
     if (contrasena != "" && correo != "") {
-        window.open("https://eliggz.github.io/home.html","_self");
+        window.open("https://eliggz.github.io/mercado.github.io/home","_self");
     }
     else if (contrasena != "") {
         alert("Se necesitan llenar los siguientes campos:\n e-mail");
