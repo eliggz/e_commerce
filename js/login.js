@@ -1,9 +1,11 @@
 function manejarSubmit(event){
     event.preventDefault();
     const contrasena=document.getElementById("contraseña").value;
-    const correo=document.getElementById("correo").value;
-    if (contrasena != "" && correo != "") {
-        window.open("https://eliggz.github.io/mercado.github.io/home","_self");
+    const usuario=document.getElementById("correo").value;
+   
+    if (contrasena != "" && usuario != "") {
+        window.open("/home.html","_self");
+       localStorage.usuario = usuario
     }
     else if (contrasena != "") {
         alert("Se necesitan llenar los siguientes campos:\n e-mail");
@@ -14,4 +16,7 @@ function manejarSubmit(event){
     else {
         alert("Se necesitan llenar los siguientes campos:\n e-mail \ncontraseña")
     }
+}
+function accesoGoogle(){
+    window.open("/home.html","_self");
 }

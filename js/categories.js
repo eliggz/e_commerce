@@ -43,6 +43,7 @@ function setCatID(id) {
 function showCategoriesList(){
 
     let htmlContentToAppend = "";
+    console.log(currentCategoriesArray)
     for(let i = 0; i < currentCategoriesArray.length; i++){
         let category = currentCategoriesArray[i];
 
