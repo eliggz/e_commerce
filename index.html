@@ -25,39 +25,26 @@
           <img src="./img/login.png"
             class="img-fluid" alt="Imagen de prueba">
         </div>
-        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <div class="col-md-8 col-lg-6 col-xl-4 elform">
           <form onsubmit="manejarSubmit(event)">
-            <div class="d-flex flex-row align-items-center justify-content-left justify-content-lg-start">
-              <p class="lead fw-normal mb-0 me-3">Ingresa con</p>
-              <span>
-              <button type="button" class="btn btn-redes">
-                <a href="https://www.facebook.com/"><i aria-hidden="true"></i>Facebook</a>
-              </button>
-  
-              <button type="button" class="btn btn-redes">
-            
-                <a href="#"><i aria-hidden="true"></i>LinkedIn</a>
-              </button>
-            </span>
-            </div>
-  
-            <div class="divider d-flex align-items-center my-4">
-              <p class="text-center fw-bold mx-3 mb-0">O</p>
-            </div>
+           
+          
   
             <!-- Email input -->
-            <div class="form-outline mb-4">
+            <div class="form-outline correocl">
               <input type="email" id="correo" class="form-control form-control-lg"
                 placeholder="Escribe tu correo electrónico" />
               <label class="form-label" for="correo">E-mail</label>
             </div>
         
             <!-- Contraseña input -->
-            <div class="form-outline mb-3">
+            <div class="form-outline contracl">
               <input type="password" id="contraseña" class="form-control form-control-lg"
                 placeholder="Ingresa tu contraseña" />
               <label class="form-label" for="contraseña">Contraseña</label>
+             
             </div>
+            
   
             <div class="d-flex justify-content-between align-items-center">
               <!-- Checkbox -->
@@ -66,23 +53,52 @@
                 <label class="form-check-label" for="opcionRecuerdame">
                   Recuérdame
                 </label>
+                
               </div>
-              <div id="g_id_onload"
-              data-client_id="527430334733-ao9lql16iqnpnjb52m5ngpeugu8ifs49.apps.googleusercontent.com"
-              data-callback="handleCredentialResponse">
-         </div>
-         <div class="g_id_signin" data-type="standard"></div>
-              <a href="#!" class="text-body">¿Olvidaste tu contraseña?</a>
+              
+              
+        
+             
             </div>
-  
+            
+  <div>
             <button class="btn btn-primary">
               Entrar
             </button> 
           </form>
         </div>
+        <div class="divider d-flex align-items-center my-4">
+          <p class="text-center fw-bold mx-3 mb-0">O</p>
+          
+        </div>
+        
+        <div class="d-flex googlebt" >
+          
+          <span>
+            <p class="lead fw-normal mb-0 me-3">Ingresa con</p>
+            <div id="g_id_onload"
+          data-client_id="527430334733-ao9lql16iqnpnjb52m5ngpeugu8ifs49.apps.googleusercontent.com"
+          data-callback="accesoGoogle">
+          <div class="g_id_signin" data-type="standard"></div>
+     </div>
+     <div>
+          <button type="button" class="btn btn-redes">
+            <a href="https://www.facebook.com/"><i aria-hidden="true"></i>Facebook</a>
+          </button>
+
+          <button type="button" class="btn btn-redes">
+        
+            <a href="https://linkedin.com"><i aria-hidden="true"></i>LinkedIn</a>
+          </button>
+        </span>
+        </div>
+
+        </div>
       </div>
+      
     </div>
       </div>
+      
    
     </div>
   </section>
