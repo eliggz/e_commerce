@@ -4,7 +4,7 @@ function manejarSubmit(event){
     const usuario=document.getElementById("correo").value;
    
     if (contrasena != "" && usuario != "") {
-        window.open("/home.html","_self");
+        window.open("https://eliggz.github.io/mercado.github.io/home","_self");
        localStorage.usuario = usuario
     }
     else if (contrasena != "") {
