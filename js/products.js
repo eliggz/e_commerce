@@ -146,19 +146,27 @@ function limpiarFiltro(rangoMin, rangoMax){
    mostrarProductos()
 }
 
-function ordenarRelAsc(a,b){
-    return b.soldCount - a.soldCount;
+function ordenarCostAsc(a,b){
+    return b.cost - a.cost;
 }
 
-function ordenarMayorVenta(){
-    mostrarProductos(lista_productos.products.sort(ordenarRelAsc))
+function ordenarMayorPrecio(){
+    mostrarProductos(lista_productos.products.sort(ordenarCostAsc))
+}
+
+function ordenarCostDesc(a,b){
+    return a.cost - b.cost;
+}
+
+function ordenarMenorPrecio(){
+    mostrarProductos(lista_productos.products.sort(ordenarCostDesc))
 }
 
 function ordenarRelDesc(a,b){
-    return a.soldCount - b.soldCount;
+  return b.soldCount - a.soldCount
 }
-
-function ordenarMenorVenta(){
-    mostrarProductos(lista_productos.products.sort(ordenarRelDesc))
+  
+function ordenarMayorRel(){
+  mostrarProductos(lista_productos.products.sort(ordenarRelDesc));
 }
   
