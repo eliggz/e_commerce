@@ -72,7 +72,7 @@ function filtrarProductos(rangoMin, rangoMax) {
     });
 
     document.getElementById("productsList").innerHTML = htmlContentToAppend;
-    console.log(listaFiltrada)
+   
   }
 
   else if(rangoMin.value && !rangoMax.value){
@@ -104,7 +104,7 @@ function filtrarProductos(rangoMin, rangoMax) {
       });
   
       document.getElementById("productsList").innerHTML = htmlContentToAppend;
-      console.log(listaFiltrada)
+      
   }
   else if(!rangoMin.value && rangoMax.value) {
     const listaFiltrada = lista_productos.products.filter((obj) => {
@@ -169,4 +169,8 @@ function ordenarRelDesc(a,b){
 function ordenarMayorRel(){
   mostrarProductos(lista_productos.products.sort(ordenarRelDesc));
 }
-  
+
+function setCatID(id) {
+  localStorage.setItem("catID", id);
+  window.location = "product-info.html"
+}
