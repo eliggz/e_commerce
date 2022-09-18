@@ -37,11 +37,89 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+<div class="row">
+<div id="infoProductos">
+</div>
+<div class="row">
+  <div id="comentariosProducto">
+</div>
+<form>
+  <div class="card">
+               
+    <div class="row">
+        
+        
+        <div class="col-10">
+            
+            <div class="comment-box ml-2">
+                
+                <h4>Puntúa este producto</h4>
+                
+                <div class="rating"> 
+                   <select id="comentarioScore">
+                    <option value="1">
+                      ☆
+                    </option>
+                    <option value="2">
+                      ☆☆
+                    </option>
+                    <option value="3">
+                      ☆☆☆
+                    </option>
+                    <option value="4">
+                      ☆☆☆☆
+                    </option>
+                    <option value="5">
+                      ☆☆☆☆☆
+                    </option>
+                  </select>
+                </div>
+                
+                <div class="comment-area">
+                    
+                    <textarea class="form-control" id="comentarioTexto" placeholder="Cuéntanos qué te pareció el producto..." rows="4"></textarea>
+                
+                </div>
+                
+                <div class="comment-btns mt-2">
+                    
+                    <div class="row">
+                        
+                        <div class="col-6">
+                            
+                            <div class="pull-left">
+                            
+                            <button class="btn btn-success btn-sm">Cancel</button>      
+                                
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="col-6">
+                            
+                            <div class="pull-right">
+                            
+                            <button onclick="guardarComentario()" type="button" class="btn btn-success send btn-sm">Send <i class="fa fa-long-arrow-right ml-1"></i></button>      
+                                
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            
+            </div>
+        
+        </div>
+    
+    
     </div>
+
+</div>
+
+
   </main>
   <footer class="text-muted">
     <div class="container">
