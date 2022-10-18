@@ -1,9 +1,8 @@
 let catID= localStorage.getItem("catID");
-console.log();
-
+let html="";
 
 getJSONData(PRODUCT_INFO_URL + catID + EXT_TYPE).then(function (resultObj){
-    console.log(resultObj);
+
     if(resultObj.status == "ok"){
         let elemento = resultObj.data;
         let htmlContentToAppend = "";
@@ -31,7 +30,7 @@ getJSONData(PRODUCT_INFO_URL + catID + EXT_TYPE).then(function (resultObj){
 }
 });
 getJSONData(PRODUCT_INFO_COMMENTS_URL + catID + EXT_TYPE).then(function (resultObj) {
-    console.log(resultObj)
+
     if (resultObj.status == "ok") {
          let comments = resultObj.data;
          let htmlContentToAppend = '';
@@ -62,12 +61,12 @@ getJSONData(PRODUCT_INFO_COMMENTS_URL + catID + EXT_TYPE).then(function (resultO
          }
      }
  })
- function guardarComentario(){
+ function enviarComentario(){
  let comentarioTexto = document.getElementById("comentarioTexto").value
  let comentarioScore = document.getElementById("comentarioScore").value
  let fecha = new Date()
  let usuario = localStorage.usuario
- console.log(comentarioTexto,comentarioScore,usuario)
+
  let productScore = comentarioScore;
  let score = ''
  for (let i = 1; i <= productScore; i++) {
@@ -91,4 +90,23 @@ getJSONData(PRODUCT_INFO_COMMENTS_URL + catID + EXT_TYPE).then(function (resultO
  `;
  document.getElementById("comentariosProducto").innerHTML = html;
  }
- 
+
+ fetch(PRODUCT_INFO_URL + catID + EXT_TYPE).then((Response) => {
+    return Response.json()
+ }).then((data) => {   
+    html=''
+      console.log(data)
+        for(let i=0; i<data.relatedProducts.length; i++){
+            console.log(data.relatedProducts[i])
+            html+=`
+          <div>
+            <img class="img-thumbnail cursor-active rounded" id="#imgRelacionadas"src="${data.relatedProducts[i].image}" class="img-thumbnail">
+            <h5>${data.relatedProducts[i].name}</h5>
+            <div>
+            `
+            console.log(catID)  
+        }
+        
+          
+        document.getElementById("prodRelacionados").innerHTML = html;
+    });
