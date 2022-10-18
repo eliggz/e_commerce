@@ -36,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link active" href="home.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="categories.html">Categorías</a>
@@ -44,8 +44,17 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
             <li class="nav-item">
-              <a class="nav-link active" href="my-profile.html" id="usuario">Identificarse</a>
+              <div class="dropdown">
+                <button id="usuario" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+                  <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+                  <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
               <script>document.getElementById("usuario").innerHTML = localStorage.usuario</script>
+            </li>
+                </ul>
+              </div>
             </li>
         </ul>
       </div>
