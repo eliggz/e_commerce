@@ -1,30 +1,52 @@
 let carrito=[];
-let inputCantidad= document.getElementById("inputCantidad");
-let subtotal = 0;
 
-
+let html='';
 
 
 
 fetch('https://japceibal.github.io/emercado-api/cats_products/101.json  ').then((Response) => {
     return Response.json()
  }).then((data) => {   
-   
-    html=''
+
     
-      console.log(subtotal)
       
             html+=`
-            <div>
-            <ul class="list-group">
-            <li class="list-group-item d-inline-flex"><img class="img-thumbnail" src=${data.products[3].image}> <p class="mb-2"> ${data.products[3].name} </p><p class="mb-2"> ${data.products[3].cost} <form>
-            <input class="col-lg-*" id="inputCantidad" type="input"></input>
-            </form> </p></li>      
-           
-            </ul>
-            </div>
+            <table class="table">
+  <thead>
+    <tr class= "text-primary">
+    <th scope="col"></th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Costo</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Subtotal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+  
+      <td class="table__productos">
+     <img  src="${data.products[3].image}">
+      </td>
+      <td class="table__nombre">
+      <h5>${data.products[3].name}</h5>
+       </td>
+      <td class="table__costo">
+      <p>USD ${data.products[3].cost}</p>
+      </td>
+      <td class="table__cantidad">
+
+      <input id="cantidad" type="number" value="1">
+    
+      </td>
+      <td>Pendiente</td>
+    </tr>
+  </tbody>
+</table>
+
+<br> 
             
-            `
+            ` 
+            
             
 
 
@@ -32,8 +54,4 @@ fetch('https://japceibal.github.io/emercado-api/cats_products/101.json  ').then(
        
     });
    
-
-
-
-
-
+    
