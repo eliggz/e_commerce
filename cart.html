@@ -62,6 +62,65 @@
     </div>
 
     <div id="containerCart"></div>
+
+    <div class="container py-5">
+      <!-- For demo purpose -->
+      <div class="row mb-4">
+          <div class="col-lg-8 mx-auto text-center">
+              <h1 class="display-6">Tipo de envío</h1>
+          </div>
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio mx-auto text-center">
+              <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked="" required="">
+              <label class="custom-control-label" for="goldradio">Premium 2 a 5 días (15%)</label>
+            </div>
+            <div class="custom-control custom-radio mx-auto text-center">
+              <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="premiumradio">Express 5 a 8 días (7%)</label>
+            </div>
+            <div class="custom-control custom-radio mx-auto text-center ">
+              <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="standardradio">Estándar 12 a 15 días (5%)</label>
+            </div>
+            
+          </div>
+      </div> <!-- End -->
+      <div class="row">
+          <div class="col-lg-6 mx-auto">
+              <div class="card ">
+                  <div class="card-header">
+                    
+                      <h1 class="display-6">Dirección de envío</h1>
+                      <!-- Credit card form content -->
+                      <div class="tab-content">
+                          <!-- credit card info-->
+                          <div id="calle" class="tab-pane fade show active pt-3">
+                              <form role="form" onsubmit="event.preventDefault()">
+                                  <div class="form-group"> <label for="calle">
+                                          <h6>Calle</h6>
+                                      </label> <input type="text" placeholder="Licurgo Bulgarelli" required class="form-control"> </div>
+                                  
+                                      <div id="numero" class="tab-pane fade show active pt-3">
+                                        <form role="form" onsubmit="event.preventDefault()">
+                                            <div class="form-group"> <label for="numero">
+                                                    <h6>Número</h6>
+                                                </label> <input type="text" placeholder="1873" required class="form-control"> </div>
+                                        
+                                                <div id="esquina" class="tab-pane fade show active pt-3">
+                                                  <form role="form" onsubmit="event.preventDefault()">
+                                                      <div class="form-group"> <label for="esquina">
+                                                              <h6>Esquina</h6>
+                                                          </label> <input type="text" required class="form-control"> </div>
+
+                                                          <button  id="botonconfirmar" type="button" class="btn-primary confimar"> Confirmar compra </button>
+                                                  </form>
+                                                  
+                                   
+              </div>
+             
+                    
+          </div>
+      </div>
     
   </main>
   <footer class="text-muted">
