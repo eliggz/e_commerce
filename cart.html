@@ -11,9 +11,10 @@
   <link href="css/styles.css" rel="stylesheet">
   <style>
    form{margin-left:50px }
-    p {margin-left: 50px }
+    p {margin-left: 0px }
     img{width: 150px;}
     .list-group-item{margin-left: 10px; margin-right: 10px;}
+
   </style>
 </head>
 
@@ -37,7 +38,7 @@
           </li>
           <li class="nav-item">
             <div class="dropdown">
-              <button id="usuario" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <button id="mailDeUsuario" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
@@ -61,7 +62,9 @@
       <hr>
     </div>
 
-    <div id="containerCart"></div>
+    <div id="containerCart">
+
+    </div>
 
     <div class="container py-5">
       <!-- For demo purpose -->
@@ -71,20 +74,43 @@
           </div>
           <div class="d-block my-3">
             <div class="custom-control custom-radio mx-auto text-center">
-              <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked="" required="">
+              <input id="goldradio" value="15" onclick="calcularEnvio()" name="publicationType" type="radio" class="custom-control-input" checked="" required="">
               <label class="custom-control-label" for="goldradio">Premium 2 a 5 días (15%)</label>
             </div>
             <div class="custom-control custom-radio mx-auto text-center">
-              <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input" required="">
+              <input id="premiumradio" value="7" onclick="calcularEnvio()" name="publicationType" type="radio" class="custom-control-input" required="">
               <label class="custom-control-label" for="premiumradio">Express 5 a 8 días (7%)</label>
             </div>
             <div class="custom-control custom-radio mx-auto text-center ">
-              <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
+              <input id="standardradio" value="5" onclick="calcularEnvio()" name="publicationType" type="radio" class="custom-control-input" required="">
               <label class="custom-control-label" for="standardradio">Estándar 12 a 15 días (5%)</label>
             </div>
             
           </div>
       </div> <!-- End -->
+
+      <div id="container">
+        <h5>Subtotal</h5>
+        <p id="subtotal1"></p>
+        <hr>
+        <h5>Costo de envío</h5>
+        <p id="costoenvio"></p>
+        <hr>
+        <h5>Total a pagar</h5>
+        <p id="total"> </p>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
       <div class="row">
           <div class="col-lg-6 mx-auto">
               <div class="card ">
@@ -122,6 +148,54 @@
           </div>
       </div>
     
+
+
+      <!-- Button trigger modal -->
+<h4 id="h4formapago" class="col display-6 "> Forma de pago </h4>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Seleccionar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Forma de pago</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <input type="radio" id="radioTarjeta" name="radioPago"  value="" onclick="seleccionPago()">
+          <label>Tarjeta de crédito</label><br>
+        <hr>
+        <div class="container"><p>Número de tarjeta  ㅤㅤㅤㅤCódigo de seguridad</p> <input class="form-control" id="inputTarjeta" type="input" ></input> <input class="form-control" id="inputCodigo" type="input" ></input>
+          <p>Vencimiento (MM/AA)</p> <input class="form-control" id="inputVto" type="input" ></input>
+        </div>
+
+<hr>
+        <div class="container">
+        <input type="radio" id="radioTransferencia" name="radioPago" value="" onclick="seleccionPago()"> <label>Transferencia bancaria</label>
+    
+      </div> 
+      <hr style="margin-left: 10px; margin-right: 10px;">
+       <div class="container">
+        <p>Numero de cuenta  <input type="input"></input></p> 
+       
+       </div>
+        
+        </div>
+
+
+
+      </div>
+      <div class="modal-footer">
+  
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
   </main>
   <footer class="text-muted">
     <div class="container">

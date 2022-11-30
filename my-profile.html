@@ -23,6 +23,19 @@
         font-size: 3.5rem;
       }
     }
+   #display-image{
+  width: 400px;
+  height: 225px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+}
+.invalid {
+  border-color: red;
+}
+.valid{
+  border-color: green;
+}
   </style>
 </head>
 
@@ -45,13 +58,15 @@
             <a class="nav-link" href="sell.html">Vender</a>
             <li class="nav-item">
               <div class="dropdown">
-                <button id="usuario" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="mailDeUsuario" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
                   <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
                   <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
-              <script>document.getElementById("usuario").innerHTML = localStorage.usuario</script>
+              <script>document.getElementById("mailDeUsuario").innerHTML = localStorage.email</script>
+              
+             
             </li>
                 </ul>
               </div>
@@ -61,11 +76,129 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <form id="perfilForm" class="needs-validation" novalidate>
+    <section style="background-color: #eee;margin-top: -20px;">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div  class="card-body text-center">
+                <div class="rounded-circle img-fluid" style="width: 200px;margin-bottom: 20px; height: 200px; margin-left: 90px;" id="display-image"></div>
+                  
+                <h5 id="nombreDeUser" class="my-3"></h5>
+               <div>
+                <button id="btnEditar" type="button" class="btn btn-light" style="margin-top: 10px;margin-right: 10px;;">Editar perfil</button>
+                <button id="btnGuardar" type="submit" class="btn btn-success guardar disabled" style="margin-top: 10px;" >Actualizar</button>
+              </div>
+              
+  
+              </div>
+              <div class="card-body text-center">
+              <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+              
+            </div>
+            </div>
+            
+         
+            <div class="card mb-4 mb-lg-0">
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div id="nombreDiv" class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Nombre *</p>
+                  </div>
+                  
+                  <div class="col-sm-9">
+                    <input id="nombre" class="form-control  invalid valid" disabled>
+                    
+
+                  </div>
+                  
+                </div>
+
+                <hr>
+                <div id="nombre2Div" class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Segundo Nombre</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <input id="nombre2" class="form-control" disabled >
+                   
+                    
+
+                  </div>
+                </div>
+
+                <hr>
+                <div id="apellidoDiv" class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Apellido *</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <input id="apellido" class="form-control  invalid valid" disabled>
+                    
+                    
+                  </div>
+                </div>
+
+                <hr>
+                <div id="apellido2Div" class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Segundo Apellido</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <input id="apellido2" class="form-control" disabled>
+                    
+                  </div>
+                </div>
+
+
+                <hr>
+                <div id="emailDiv" class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Email *</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <input id="email" class="form-control invalid valid" required disabled>
+                    <p style="color: red;" hidden>Ingresa un email válido</p>
+                  </div>
+            
+                </div>
+
+
+                <hr>
+                <div id="telefonoDiv" class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Teléfono de contacto *</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <input id="telefono" class="form-control invalid valid " disabled>
+                    <p style="color: red;" hidden>Ingresa un teléfono válido</p>
+                  </div>
+               
+                </div>
+             
+              </div>
+           
+            </div>
+
+          
+                </div>
+             
+              </div>
+            </div>
+          
+          </div>
+        </div>
       </div>
-    </div>
+      
+      
+    </form>
+    
+    </section>
   </main>
   <footer class="text-muted">
     <div class="container">
