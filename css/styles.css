@@ -204,16 +204,10 @@ height: calc(100% - 73px);
 height: 100%;
 }
 }
-.btn{
-  color: #ffffff;
-  font-style: oblique ;
-  border-color: #FA8072
-  };
-
 
 a {
   text-decoration: none;
-  color: white;
+  color: rgb(1, 52, 205);
 }
 /* unvisited link */
 a:link {
@@ -223,13 +217,13 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: rgb(0, 0, 0);
+  color: rgb(86, 0, 94);
   text-decoration: none ;
 }
 
 /* mouse over link */
 a:hover {
-  color: rgb(255, 0, 0);
+  color: rgb(10, 0, 144);
   text-decoration: none ;
 }
 
@@ -239,7 +233,79 @@ a:active {
   text-decoration: none ;
 }
 .btn-redes{
-  color: #fff;
+
     background-color: #fbfbfb;
-    border-color: #ffffff;
+    border-color: #220283;
+    margin-left: 10px;
 }
+div .form-label {
+  margin-top: 10px;
+}
+.h-100 { 
+margin-top: 60px;
+}
+.img-fluid { 
+  margin-bottom: 150px;
+}
+div .form-check-label{
+  font-size: smaller;
+}
+.googlebt{
+  margin-left: 140px;
+}
+.lead{
+  margin-left: 50px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+
+
+
+
+
+
+
+.comment-box{
+    
+    padding:5px;
+}
+
+
+
+.comment-area textarea{
+   resize: none; 
+        border: 1px solid #ad9f9f;
+}
+
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: 0 0 0 1px #8fcec6  !important;
+}
+
+.send {
+    color: #fff;
+    background-color: #2d9eb4 ;
+    border-color: #2d9eb4 ;
+}
+
+.send:hover {
+    color: #fff;
+    background-color: #8fcec6 ;
+    border-color: #8fcec6 ;
+}
+
+.table__cantidad>input{
+  width: 40px;
+
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.table__productos > img{
+  margin-right: -100px;
+}
+
