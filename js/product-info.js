@@ -1,6 +1,7 @@
 let catID= localStorage.getItem("catID");
 let html="";
 
+
 getJSONData(PRODUCT_INFO_URL + catID + EXT_TYPE).then(function (resultObj){
 
     if(resultObj.status == "ok"){
@@ -95,16 +96,16 @@ getJSONData(PRODUCT_INFO_COMMENTS_URL + catID + EXT_TYPE).then(function (resultO
     return Response.json()
  }).then((data) => {   
     html=''
-      console.log(data)
+      
         for(let i=0; i<data.relatedProducts.length; i++){
-            console.log(data.relatedProducts[i])
+            
             html+=`
           <div>
             <img class="img-thumbnail cursor-active rounded" id="#imgRelacionadas"src="${data.relatedProducts[i].image}" class="img-thumbnail">
             <h5>${data.relatedProducts[i].name}</h5>
             <div>
             `
-            console.log(catID)  
+          
         }
         
           
