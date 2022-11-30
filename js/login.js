@@ -1,16 +1,20 @@
 function manejarSubmit(event){
     event.preventDefault();
-    const contrasena=document.getElementById("contraseña").value;
-    const usuario=document.getElementById("correo").value;
+    let contrasena=document.getElementById("contraseña");
+    let correo=document.getElementById("correo");
    
-    if (contrasena != "" && usuario != "") {
-        window.open("https://eliggz.github.io/mercado.github.io/home","_self");
-       localStorage.usuario = usuario
+    
+
+    if (contrasena.value != '' && correo.value != '') {
+        window.open("/ecommerce/home.html","_self");
+     localStorage.setItem("email",correo.value)
+     usuario.email = localStorage.getItem("email")
+     
     }
-    else if (contrasena != "") {
+    else if (contrasena.value != "") {
         alert("Se necesitan llenar los siguientes campos:\n e-mail");
     }
-    else if (correo != ""){
+    else if (correo.value != ""){
         alert("Se necesitan llenar los siguientes campos:\n contraseña");
     }
     else {
@@ -20,3 +24,4 @@ function manejarSubmit(event){
 function accesoGoogle(){
     window.open("/home.html","_self");
 }
+
