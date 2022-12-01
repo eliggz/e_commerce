@@ -7,7 +7,7 @@ function manejarSubmit(event){
     
 
     if (contrasena.value != '' && correo.value != '') {
-        window.open("/ecommerce/home.html","_self");
+        window.open("/home.html","_self");
      localStorage.setItem("email",correo.value)
      usuario.email = localStorage.getItem("email")
      
