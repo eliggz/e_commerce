@@ -65,7 +65,16 @@ function formSubmit() {
      localStorage.setItem("segundo apellido",apellido2.value)
      localStorage.setItem("email",email.value)
      localStorage.setItem("telefono",telefono.value)
+     nombre.disabled = true
+     nombre2.disabled=true
+     apellido.disabled=true
+     apellido2.disabled=true
+     email.disabled=true
+     telefono.disabled=true
+     btnGuardar.disabled=true
+   
   }
+  
 }
 
 
@@ -77,19 +86,20 @@ document.getElementById("apellido2").value = localStorage.getItem("segundo apell
 document.getElementById("email").value = localStorage.getItem("email")
 document.getElementById("telefono").value = localStorage.getItem("telefono")
 
+nombreUsuario = localStorage.getItem("nombre")
+ nombre2Usuario = localStorage.getItem("segundo nombre")
+apellidoUsuario = localStorage.getItem("apellido")
+apellido2Usuario = localStorage.getItem("apellido2")
+ emailUsuario = localStorage.getItem("email")
+ telUsuario = localStorage.getItem("telefono")
+
+
 usuario["nombre"] = nombreUsuario
 usuario["segundo nombre"] = nombre2Usuario
 usuario["apellido"] = apellidoUsuario
 usuario["segundo apellido"] = apellido2Usuario
 usuario["email"] = emailUsuario
 usuario["telefono"] = telUsuario
-
-
-
-
-
-
-
 
 
 const display_image = document.getElementById("display_image")
