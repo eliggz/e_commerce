@@ -7,7 +7,7 @@ function manejarSubmit(event){
     
 
     if (contrasena.value != '' && correo.value != '') {
-        window.open("/home.html","_self");
+        window.open("https://eliggz.github.io/mercado.github.io/home","_self");
      localStorage.setItem("email",correo.value)
      usuario.email = localStorage.getItem("email")
      
